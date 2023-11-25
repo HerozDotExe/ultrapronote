@@ -1,0 +1,28 @@
+{
+  "name": "ultrapronote",
+  "description": "Ultrapronote est un userscript pour pronote permettant :\r * De se connecter automatiquement\r * De voir sa moyenne générale\r * De créer des raccourcis (pour accéder à certaines pages plus facilement) **EN COURS**\r * Plus potentiellement dans le futur",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm exec nodemon --exec \"pnpm run build:dev\" -e \"ts\"",
+    "build": "node scripts/build.js",
+    "build:dev": "node scripts/build.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HerozDotExe/ultrapronote.git"
+  },
+  "author": "Heroz_0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HerozDotExe/ultrapronote/issues"
+  },
+  "homepage": "https://github.com/HerozDotExe/ultrapronote#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.27"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.5",
+    "nodemon": "^3.0.1"
+  }
+}
