@@ -6,4 +6,4 @@ Ultrapronote est un userscript pour pronote permettant :
 * Plus potentiellement dans le futur
 
 ## Installation
-Pour utiliser ultrapronote, vous devez utiliser une extension de navigateur comme [TamperMonkey](https://www.tampermonkey.net/) et y installer : `ultra_pronote.user.js`.
+Pour utiliser ultrapronote, vous devez utiliser une extension de navigateur comme [TamperMonkey](https://www.tampermonkey.net/) et y installer : `ultra_pronote.user.js`, téléchargeable [ici](https://github.com/HerozDotExe/ultrapronote/releases/latest/).
