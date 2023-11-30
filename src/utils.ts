@@ -3,7 +3,11 @@ export function log(...msg) {
 }
 
 export function moyenne(v) {
-    return parseFloat(v.replace(",", "."));
+    const r = parseFloat(v.replace(",", "."));
+
+    if(isNaN(r)) log(`Moyenne égale ${v} ignorée.`)
+
+    if(!isNaN(r)) {return r} else return 0
 }
 
 export function reduce(moyennes) {
@@ -46,7 +50,10 @@ export function moyenneGénérale() {
 
             log("Détéction d'une demande d'affichage des notes, affichage des la moyenne générale...")
 
-            const moyennes = r.donneesSec.donnees.listeServices["V"].map((m) => {
+            const moyennes = r.donneesSec.donnees.listeServices["V"].filter((m) => {
+                if(isNaN(parseFloat(m.moyEleve["V"].replace(",", ".")))) log(`Moyenne égale à ${m.moyEleve["V"]} ignorée, car elle ne semble pas être un nombre (non noté par exemple ?).`)
+                return !isNaN(parseFloat(m.moyEleve["V"].replace(",", ".")))
+            }).map((m) => {
                 return m.moyEleve["V"];
             });
 
